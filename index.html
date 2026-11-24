@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Countryside Manor Farm | Eggs, Produce &amp; Homemade Sourdough | Franklin, Ohio</title>
-<meta name="description" content="Countryside Manor Farm, 1730 Shaker Rd, Franklin, Ohio. Farm fresh chicken eggs, produce and homemade sourdough bread. Call or text (513) 264-5188 to order.">
+<title>Countryside Manor Farm | Farm Shop: Eggs, Tallow &amp; Homemade Bread | Franklin, Ohio</title>
+<meta name="description" content="Countryside Manor Farm, 1730 Shaker Rd, Franklin, Ohio. Farm fresh eggs, tallow, homemade bread, handcrafted jewelry and crochet. Our farm shop is always open: drive past the house, first barn. (513) 264-5188.">
 <meta property="og:title" content="Countryside Manor Farm | Franklin, Ohio">
-<meta property="og:description" content="Farm fresh eggs, produce and homemade sourdough on Shaker Road. Blessed beyond belief.">
+<meta property="og:description" content="Farm shop always open on Shaker Road: eggs, tallow, homemade bread and handcrafted goods. Blessed beyond belief.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="img/logo.jpg">
 <meta name="theme-color" content="#3b2f28">
@@ -69,11 +69,15 @@ header{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--stone
 @media (max-width:440px){.nav .btn span{display:none}.nav .btn{padding:11px}.brand small{display:none}.brand b{font-size:19px}}
 
 /* hero */
-.hero{position:relative;min-height:min(90vh,780px);display:flex;align-items:flex-end;color:#fbf6ea;overflow:hidden;background:#2a221d}
-.hero > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:35% 60%}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(24,18,14,.82) 0%,rgba(24,18,14,.5) 50%,rgba(24,18,14,.08) 82%),linear-gradient(0deg,rgba(24,18,14,.55),transparent 45%)}
-.hero .wrap{position:relative;z-index:1;padding:120px 0 70px}
-.hero .seal{width:112px;height:112px;border-radius:50%;background:#fff;padding:4px;box-shadow:0 10px 30px rgba(0,0,0,.35);margin-bottom:22px}
+.hero{position:relative;color:#fbf6ea;overflow:hidden;background:#2a221d}
+.hero .wrap{position:relative;z-index:1;padding:clamp(48px,7vw,96px) 0 clamp(56px,7vw,96px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.hero-photo{position:relative}
+.hero-photo img.house{width:100%;aspect-ratio:2/1.15;object-fit:cover;border-radius:10px;box-shadow:0 20px 50px rgba(0,0,0,.45);border:6px solid #f4ecd9}
+.hero-photo figcaption{margin-top:12px;font-size:14px;color:#d9ccb6}
+.open-badge{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:10px 16px;border-radius:999px;background:rgba(244,236,217,.12);border:1px solid rgba(244,236,217,.3);font-weight:600;font-size:15.5px}
+.open-badge .dot{width:10px;height:10px;border-radius:50%;background:#6fcf5f;box-shadow:0 0 0 4px rgba(111,207,95,.25)}
+.hero .seal{width:96px;height:96px;border-radius:50%;background:#fff;padding:4px;box-shadow:0 10px 30px rgba(0,0,0,.35);margin-bottom:20px}
+@media (max-width:880px){.hero .wrap{grid-template-columns:1fr}.hero-photo{order:-1}}
 .hero .eyebrow{color:var(--gold-2)}
 :root[data-theme="dark"] .hero .eyebrow{color:#e8d8b8}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero .eyebrow{color:#e8d8b8}}
@@ -115,8 +119,8 @@ header{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--stone
 
 /* offerings */
 .ask{background:var(--stone-2)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-@media (max-width:960px){.cards{grid-template-columns:repeat(2,1fr)}}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media (max-width:1060px){.cards{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:580px){.cards{grid-template-columns:1fr}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
 .card img{aspect-ratio:4/3;object-fit:cover;width:100%}
@@ -257,7 +261,8 @@ footer .fine{grid-column:1/-1;border-top:1px solid #352c25;padding-top:20px;font
       <span><b>Countryside Manor Farm</b><small>Franklin, Ohio</small></span>
     </a>
     <nav class="links" aria-label="Sections">
-      <a href="#offer" data-track="Header · From the Farm">From the Farm</a>
+      <a href="#shop" data-track="Header · Farm Shop">Farm Shop</a>
+      <a href="#offer" data-track="Header · What We Sell">What We Sell</a>
       <a href="#bread" data-track="Header · Bread Menu">Bread Menu</a>
       <a href="#holiday" data-track="Header · Holidays">Holidays</a>
       <a href="#visit" data-track="Header · Visit">Visit</a>
@@ -268,60 +273,69 @@ footer .fine{grid-column:1/-1;border-top:1px solid #352c25;padding-top:20px;font
 
 <main id="top">
   <section class="hero" aria-label="Welcome" data-section="Hero">
-    <img src="img/hero-farmhouse.jpg" alt="White farmhouse with a wraparound porch set on a green lawn" fetchpriority="high">
     <div class="wrap">
-      <img class="seal" src="img/logo.jpg" alt="Countryside Manor Farm logo: a barn with a rooster weathervane, 1730 Shaker Rd Franklin Ohio, Blessed Beyond Belief">
-      <span class="eyebrow">Shaker Road · Franklin, Ohio</span>
-      <h1>Countryside Manor Farm</h1>
-      <p class="motto">Blessed beyond belief</p>
-      <p class="lead">Farm fresh chicken eggs, produce and homemade sourdough from our farm on Shaker Road. Call or text to place an order.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-main" href="tel:+15132645188" data-track="Call · Hero"><svg><use href="#i-phone"/></svg>Call (513) 264-5188</a>
-        <a class="btn btn-line" href="#bread" data-track="Hero · See the bread menu"><svg><use href="#i-bread"/></svg>See the bread menu</a>
+      <div>
+        <img class="seal" src="img/logo.jpg" alt="Countryside Manor Farm logo: a barn with a rooster weathervane, 1730 Shaker Rd Franklin Ohio, Blessed Beyond Belief">
+        <span class="eyebrow">Shaker Road · Franklin, Ohio</span>
+        <h1>Countryside Manor Farm</h1>
+        <p class="motto">Blessed beyond belief</p>
+        <p class="lead">Farm fresh eggs, tallow and homemade bread every day, plus handcrafted jewelry and crocheted items. Our farm shop is always open.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-main" href="https://www.google.com/maps/dir/?api=1&destination=1730+Shaker+Rd,+Franklin,+OH+45005" target="_blank" rel="noopener" data-track="Directions · Hero"><svg><use href="#i-pin"/></svg>Get directions</a>
+          <a class="btn btn-line" href="tel:+15132645188" data-track="Call · Hero"><svg><use href="#i-phone"/></svg>(513) 264-5188</a>
+        </div>
+        <div class="open-badge"><span class="dot"></span>Farm shop always open · first barn past the house</div>
       </div>
+      <figure class="hero-photo" style="margin:0">
+        <img class="house" src="img/farmhouse.jpg" alt="The Countryside Manor Farm house: a sage-green ranch home with a metal roof, brick chimney and front porch" fetchpriority="high">
+        <figcaption>Our home on Shaker Road. Drive on past the house to the shop.</figcaption>
+      </figure>
     </div>
   </section>
 
   <div class="strip" data-section="Info strip">
     <ul class="wrap">
-      <li><svg><use href="#i-egg"/></svg><a href="#offer" data-track="Info strip · Farm fresh eggs &amp; homegrown produce"><b>Farm fresh eggs</b><span>&amp; homegrown produce</span></a></li>
-      <li><svg><use href="#i-bread"/></svg><a href="#bread" data-track="Info strip · Homemade sourdough Loaves from $5"><b>Homemade sourdough</b><span>Loaves from $5</span></a></li>
-      <li><svg><use href="#i-phone"/></svg><a href="tel:+15132645188" data-track="Call · Info strip"><b>(513) 264-5188</b><span>Call or text to order</span></a></li>
+      <li><svg><use href="#i-egg"/></svg><a href="#offer" data-track="Info strip · Eggs, tallow &amp; bread Always available"><b>Eggs, tallow &amp; bread</b><span>Always available</span></a></li>
+      <li><svg><use href="#i-bread"/></svg><a href="#shop" data-track="Info strip · Farm shop always open First barn past the house"><b>Farm shop always open</b><span>First barn past the house</span></a></li>
+      <li><svg><use href="#i-phone"/></svg><a href="tel:+15132645188" data-track="Call · Info strip"><b>(513) 264-5188</b><span>Call or text</span></a></li>
       <li><svg><use href="#i-pin"/></svg><a href="https://www.google.com/maps/search/?api=1&query=1730+Shaker+Rd,+Franklin,+OH+45005" target="_blank" rel="noopener" data-track="Directions · Info strip"><b>1730 Shaker Rd</b><span>Franklin, OH 45005</span></a></li>
     </ul>
   </div>
 
-  <section class="sec" id="farm" data-section="Our farm">
+  <section class="sec" id="shop" data-section="The farm shop">
     <div class="wrap about">
       <div>
-        <span class="eyebrow">Our farm</span>
-        <h2>Fresh, simple, made with care.</h2>
-        <p class="lead">Countryside Manor Farm sits at 1730 Shaker Road in Franklin, Ohio. We raise chickens for farm fresh eggs, grow our own produce and bake homemade bread.</p>
-        <p>We're a growing farm and we're grateful to every neighbor who has stopped by, placed an order or shared our page. The best way to order is a quick call or text, and we'll let you know what's ready.</p>
+        <span class="eyebrow">The farm shop</span>
+        <h2>Always open. Just drive on past the house.</h2>
+        <p class="lead">Our farm shop at 1730 Shaker Road is always open. Drive on past the house, and it's the first barn.</p>
+        <p>Inside you'll find farm fresh eggs, tallow and homemade bread, along with handcrafted jewelry and crocheted items. Stop in any time. If you'd like something set aside, a quick call or text works too.</p>
         <blockquote class="quote">“We've had a tremendous amount of support and are blessed to have so many people interested in purchasing our Farm Fresh Chicken Eggs &amp; Produce!”<small>From our Facebook page</small></blockquote>
+        <div class="hero-ctas" style="margin-top:24px">
+          <a class="btn btn-main" href="https://www.google.com/maps/dir/?api=1&destination=1730+Shaker+Rd,+Franklin,+OH+45005" target="_blank" rel="noopener" data-track="Directions · The farm shop"><svg><use href="#i-pin"/></svg>Get directions</a>
+        </div>
       </div>
       <div class="collage">
-        <img class="a" src="img/red-barn.jpg" alt="Red barn beside a black board fence and autumn trees" loading="lazy">
+        <img class="a" src="img/farm-shop-barn.jpg" alt="The Countryside Manor Farm shop: a white barn with a wooden porch, an OPEN sign on the door, a bench and a milk can with hydrangeas" loading="lazy">
         <img class="b" src="img/logo.jpg" alt="Countryside Manor Farm logo" loading="lazy">
       </div>
     </div>
   </section>
 
-  <section class="sec ask" id="offer" data-section="From the farm">
+  <section class="sec ask" id="offer" data-section="Always in the shop">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">From the farm</span>
-        <h2>What we have for you.</h2>
-        <p>Supply changes with the season and the flock. Tap a card to start a text that's already filled in.</p>
+        <span class="eyebrow">Always in the shop</span>
+        <h2>What you'll find here.</h2>
+        <p>Eggs, tallow and bread are always available, along with handcrafted pieces made right here. Stop by the shop, or tap a card to text us.</p>
       </div>
       <div class="cards">
         <article class="card">
           <img src="img/eggs.jpg" alt="Rows of brown chicken eggs in a tray" loading="lazy">
           <div class="in">
-            <span class="price">Coming in daily</span>
+            <span class="price">Always available</span>
             <h3>Farm fresh eggs</h3>
-            <p>Our hens are laying, about a dozen a day and growing. Ask to get on the list for your next dozen.</p>
-            <a class="go" href="sms:+15132645188" data-sms="Hi! I'd like a dozen farm fresh eggs from Countryside Manor Farm. When can I pick them up?" data-track="Text · From the farm · Reserve a dozen">Reserve a dozen &rarr;</a>
+            <p>Fresh chicken eggs from our own hens, ready in the shop.</p>
+            <a class="go" href="sms:+15132645188" data-sms="Hi! I'd like to pick up a dozen farm fresh eggs from Countryside Manor Farm." data-track="Text · Always in the shop · Text about eggs">Text about eggs &rarr;</a>
           </div>
         </article>
         <article class="card">
@@ -330,16 +344,25 @@ footer .fine{grid-column:1/-1;border-top:1px solid #352c25;padding-top:20px;font
             <span class="price">From $5 a loaf</span>
             <h3>Homemade bread</h3>
             <p>Sandwich bread, classic sourdough and specialty loaves like Jalapeño Cheddar and Peppermint Bark.</p>
-            <a class="go" href="#bread" data-track="From the farm · See the full menu">See the full menu &rarr;</a>
+            <a class="go" href="#bread" data-track="Always in the shop · See the bread menu">See the bread menu &rarr;</a>
           </div>
         </article>
         <article class="card">
-          <img src="img/field-tree-sunrise.jpg" alt="Green field under an oak tree at sunrise" loading="lazy">
+          <img src="img/fb-cover.jpg" alt="Farm goods: jars, eggs and baked bread in a holiday farm scene" loading="lazy" style="object-position:20% 85%">
           <div class="in">
-            <span class="price">In season</span>
-            <h3>Fresh produce</h3>
-            <p>Grown right here on the farm. Ask what's ready to pick this week.</p>
-            <a class="go" href="sms:+15132645188" data-sms="Hi! What produce do you have ready this week?" data-track="Text · From the farm · Ask what&#x27;s ready">Ask what's ready &rarr;</a>
+            <span class="price">Always available</span>
+            <h3>Tallow</h3>
+            <p>Our tallow and whipped tallow body butter, including the seasonal Gingerbread Cookie scent.</p>
+            <a class="go" href="sms:+15132645188" data-sms="Hi! I'm interested in your tallow / tallow body butter." data-track="Text · Always in the shop · Text about tallow">Text about tallow &rarr;</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="img/elf-ornaments.jpg" alt="Hand-painted Buddy the Elf ornaments" loading="lazy" style="object-position:center 60%">
+          <div class="in">
+            <span class="price">Handcrafted</span>
+            <h3>Jewelry &amp; crochet</h3>
+            <p>Handcrafted jewelry, crocheted items and hand-painted pieces like our $3 Buddy the Elf ornaments.</p>
+            <a class="go" href="sms:+15132645188" data-sms="Hi! I'd like to ask about your handcrafted jewelry and crocheted items." data-track="Text · Always in the shop · Ask what&#x27;s in stock">Ask what's in stock &rarr;</a>
           </div>
         </article>
       </div>
@@ -366,7 +389,7 @@ footer .fine{grid-column:1/-1;border-top:1px solid #352c25;padding-top:20px;font
             </tbody>
           </table>
         </div>
-        <p class="menu-note">Specialty flavors rotate with the season. Call or text to order, and we'll let you know when your bread is ready.</p>
+        <p class="menu-note">Bread is always in the shop. Specialty flavors rotate with the season, so call or text if you want a particular loaf set aside.</p>
         <div class="hero-ctas" style="margin-top:18px">
           <a class="btn btn-main" href="sms:+15132645188" data-sms="Hi! I'd like to order bread from Countryside Manor Farm: " data-track="Text · Homemade bread · Text a bread order"><svg><use href="#i-msg"/></svg>Text a bread order</a>
           <a class="btn btn-line" href="tel:+15132645188" data-track="Call · Homemade bread"><svg><use href="#i-phone"/></svg>Call to order</a>
@@ -405,28 +428,28 @@ footer .fine{grid-column:1/-1;border-top:1px solid #352c25;padding-top:20px;font
     </div>
   </section>
 
-  <section class="sec" id="how" data-section="How to order">
+  <section class="sec" id="how" data-section="Getting here">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">How to order</span>
-        <h2>Simple, the country way.</h2>
+        <span class="eyebrow">Getting here</span>
+        <h2>Finding the shop is easy.</h2>
       </div>
       <div class="steps">
-        <div class="step"><h3>Call or text</h3><p>Reach us at (513) 264-5188 with what you'd like: eggs, bread, produce or a holiday order.</p></div>
-        <div class="step"><h3>We'll confirm</h3><p>We'll let you know when it's ready and set a pickup time that works for you.</p></div>
-        <div class="step"><h3>Pick up on Shaker Road</h3><p>Come by 1730 Shaker Rd in Franklin. Directions and a map are below.</p></div>
+        <div class="step"><h3>Head to Shaker Road</h3><p>Come to 1730 Shaker Rd in Franklin. The farm shop is always open.</p></div>
+        <div class="step"><h3>Drive past the house</h3><p>Go on past the house. The shop is the first barn, look for the OPEN sign on the porch.</p></div>
+        <div class="step"><h3>Pick out your goods</h3><p>Eggs, tallow, bread, jewelry and crochet. Want something set aside or a special loaf? Call or text (513) 264-5188.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="sec note" id="note" data-section="Place an order">
+  <section class="sec note" id="note" data-section="Set something aside">
     <div class="wrap note-box">
       <div>
-        <span class="eyebrow">Place an order</span>
-        <h2>Put your order together here.</h2>
-        <p>Pick what you'd like, add your name and when you'd like to pick up, and we'll open your phone's messages with it all filled in. Nothing is sent until you press send.</p>
+        <span class="eyebrow">Set something aside</span>
+        <h2>Want it waiting for you?</h2>
+        <p>The shop is always open, but if you'd like something held or a special loaf baked, put your request together here. We'll open your phone's messages with it all filled in, and nothing is sent until you press send.</p>
         <p>Rather talk? Call any time:</p>
-        <a class="big-tel" href="tel:+15132645188" data-track="Call · Place an order">(513) 264-5188</a>
+        <a class="big-tel" href="tel:+15132645188" data-track="Call · Set something aside">(513) 264-5188</a>
       </div>
       <form id="noteForm" onsubmit="return false" name="Text builder">
         <fieldset>
@@ -435,7 +458,8 @@ footer .fine{grid-column:1/-1;border-top:1px solid #352c25;padding-top:20px;font
             <input type="radio" name="topic" id="t1" value="a dozen farm fresh eggs" checked><label for="t1">Eggs</label>
             <input type="radio" name="topic" id="t2" value="sourdough bread"><label for="t2">Sourdough</label>
             <input type="radio" name="topic" id="t3" value="sandwich bread"><label for="t3">Sandwich bread</label>
-            <input type="radio" name="topic" id="t4" value="fresh produce"><label for="t4">Produce</label>
+            <input type="radio" name="topic" id="t4" value="tallow"><label for="t4">Tallow</label>
+            <input type="radio" name="topic" id="t7" value="handcrafted jewelry or crochet"><label for="t7">Jewelry &amp; crochet</label>
             <input type="radio" name="topic" id="t5" value="a holiday order"><label for="t5">Holiday order</label>
             <input type="radio" name="topic" id="t6" value="something else"><label for="t6">Something else</label>
           </div>
@@ -449,8 +473,8 @@ footer .fine{grid-column:1/-1;border-top:1px solid #352c25;padding-top:20px;font
         <span class="l" style="margin-top:16px">Your text will read:</span>
         <div class="preview" id="preview" aria-live="polite"></div>
         <div class="form-ctas">
-          <a class="btn btn-main" id="sendText" href="sms:+15132645188" data-track="Text · Place an order · Open in messages"><svg><use href="#i-msg"/></svg>Open in messages</a>
-          <a class="btn btn-line" href="tel:+15132645188" data-track="Call · Place an order"><svg><use href="#i-phone"/></svg>Call instead</a>
+          <a class="btn btn-main" id="sendText" href="sms:+15132645188" data-track="Text · Set something aside · Open in messages"><svg><use href="#i-msg"/></svg>Open in messages</a>
+          <a class="btn btn-line" href="tel:+15132645188" data-track="Call · Set something aside"><svg><use href="#i-phone"/></svg>Call instead</a>
         </div>
       </form>
     </div>
@@ -462,7 +486,7 @@ footer .fine{grid-column:1/-1;border-top:1px solid #352c25;padding-top:20px;font
         <span class="eyebrow">Find us</span>
         <h2>Visit the farm.</h2>
         <address class="addr">1730 Shaker Rd<br>Franklin, OH 45005</address>
-        <div class="hours"><b>Please call or text before you come.</b> We're a working farm, so reaching out first means your order is ready and someone's there to meet you.</div>
+        <div class="hours"><b>The farm shop is always open.</b> Drive on past the house, and the shop is the first barn.</div>
         <p>We're in Warren County, between Springboro and Lebanon and a few minutes east of I-75.</p>
         <div class="hero-ctas">
           <a class="btn btn-main" href="https://www.google.com/maps/dir/?api=1&destination=1730+Shaker+Rd,+Franklin,+OH+45005" target="_blank" rel="noopener" data-track="Directions · Find us"><svg><use href="#i-pin"/></svg>Get directions</a>
@@ -482,9 +506,10 @@ footer .fine{grid-column:1/-1;border-top:1px solid #352c25;padding-top:20px;font
         <h2>Good to know.</h2>
       </div>
       <div class="faq">
-        <details open><summary>How do I order?</summary><p>Call or text (513) 264-5188, or use the <a href="#note" data-track="FAQ · order form">order form</a> above to send a text with everything filled in. We'll confirm and let you know when it's ready.</p></details>
+        <details open><summary>When is the farm shop open?</summary><p>Always. Come to 1730 Shaker Rd, drive on past the house, and the shop is the first barn.</p></details>
+        <details><summary>What do you sell?</summary><p>Farm fresh eggs, tallow and homemade bread are always available, plus handcrafted jewelry and crocheted items. Holiday specials like our Gingerbread Loaf and hand-painted ornaments come and go with the season.</p></details>
+        <details><summary>Can I have something set aside?</summary><p>Yes. Call or text (513) 264-5188, or use the <a href="#note" data-track="FAQ · request form">request form</a> above, and we'll have it ready for you.</p></details>
         <details><summary>Where is Countryside Manor Farm?</summary><p>1730 Shaker Rd, Franklin, Ohio 45005, in Warren County. <a href="https://www.google.com/maps/dir/?api=1&destination=1730+Shaker+Rd,+Franklin,+OH+45005" target="_blank" rel="noopener" data-track="Directions · FAQ">Open directions in Google Maps</a>.</p></details>
-        <details><summary>Are eggs always available?</summary><p>Our hens are laying about a dozen a day right now, and it's growing. Text us to reserve a dozen and we'll set it aside.</p></details>
         <details><summary>Which bread flavors do you have?</summary><p>Sandwich bread ($5) and classic sourdough ($10) are our staples. Specialty sourdough like Jalapeño Cheddar, Pumpkin Slice and Peppermint Bark, plus our Gingerbread Loaf, are $12 and rotate with the season.</p></details>
         <details><summary>Where can I see what's new?</summary><p>We post new bakes, holiday items and farm updates on <a href="https://www.facebook.com/CountrysideManorFarm" target="_blank" rel="noopener" data-track="FAQ · our Facebook page">our Facebook page</a>. You can also email <a href="mailto:CountrysideManorFarm@yahoo.com" data-track="Email · FAQ">CountrysideManorFarm@yahoo.com</a>.</p></details>
       </div>
@@ -492,10 +517,10 @@ footer .fine{grid-column:1/-1;border-top:1px solid #352c25;padding-top:20px;font
   </section>
 
   <section class="contact" id="contact" aria-label="Contact" data-section="Contact">
-    <img src="img/barn-silo-sunset.jpg" alt="" loading="lazy">
+    <img src="img/farm-shop-barn.jpg" alt="" loading="lazy">
     <div class="wrap">
-      <span class="eyebrow">Get in touch</span>
-      <h2>We'd be glad to hear from you.</h2>
+      <span class="eyebrow">Come on by</span>
+      <h2>The shop is always open.</h2>
       <a class="tel" href="tel:+15132645188" data-track="Call · Contact">(513) 264-5188</a>
       <div class="hero-ctas">
         <a class="btn btn-main" href="tel:+15132645188" data-track="Call · Contact"><svg><use href="#i-phone"/></svg>Call now</a>
@@ -510,17 +535,18 @@ footer .fine{grid-column:1/-1;border-top:1px solid #352c25;padding-top:20px;font
     <img class="flogo" src="img/logo-180.jpg" alt="Countryside Manor Farm logo" loading="lazy">
     <div>
       <b>Countryside Manor Farm</b>
-      <p>Farm fresh eggs, produce &amp; homemade bread · Blessed beyond belief</p>
+      <p>Eggs, tallow, homemade bread &amp; handcrafted goods · Blessed beyond belief</p>
       <p><a href="https://www.facebook.com/CountrysideManorFarm" target="_blank" rel="noopener" data-track="Footer · Facebook">Facebook</a></p>
     </div>
     <div>
       <p><a href="https://www.google.com/maps/search/?api=1&query=1730+Shaker+Rd,+Franklin,+OH+45005" target="_blank" rel="noopener" data-track="Directions · Footer">1730 Shaker Rd<br>Franklin, OH 45005</a></p>
     </div>
     <div>
+      <p>Farm shop always open</p>
       <p><a href="tel:+15132645188" data-track="Call · Footer">(513) 264-5188</a></p>
       <p><a href="mailto:CountrysideManorFarm@yahoo.com" data-track="Email · Footer">CountrysideManorFarm@yahoo.com</a></p>
     </div>
-    <p class="fine">&copy; <span id="yr">2026</span> Countryside Manor Farm. Logo, bread and holiday images are the farm's own, from its Facebook page. Landscape photos are representative stock photography from Unsplash.</p>
+    <p class="fine">&copy; <span id="yr">2026</span> Countryside Manor Farm. House, barn, logo, bread and holiday images are the farm's own. The egg photo is representative stock photography from Unsplash.</p>
   </div>
 </footer>
 

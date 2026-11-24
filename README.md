@@ -1,6 +1,6 @@
 # Countryside Manor Farm
 
-Single-page sample website for Countryside Manor Farm in Franklin, Ohio (Warren County): farm fresh chicken eggs, produce and homemade sourdough. "Blessed beyond belief."
+Single-page sample website for Countryside Manor Farm in Franklin, Ohio (Warren County). Farm shop always open (drive past the house, first barn): eggs, tallow and homemade bread always, plus handcrafted jewelry and crocheted items. "Blessed beyond belief."
 
 - **Phone:** (513) 264-5188
 - **Address:** 1730 Shaker Rd, Franklin, OH 45005
@@ -12,7 +12,8 @@ Single-page sample website for Countryside Manor Farm in Franklin, Ohio (Warren 
 - `index.html`: the whole site. CSS is inline and there's no build step. It uses Gloock and Instrument Sans in an espresso and gold palette taken from the farm's logo, with light and dark themes.
 - `img/logo.jpg`, `img/logo-180.jpg`, `favicon.png`: the farm's real logo (from Facebook).
 - `img/bread-menu.jpg`, `peppermint-bark-sourdough.jpg`, `jalapeno-cheddar-loaf.jpg`, `gingerbread-loaf.jpg`, `elf-ornaments.jpg`, `yuletide-village.jpg`, `fb-cover.jpg`: the farm's own flyers, from its Facebook page.
-- `img/hero-farmhouse.jpg`, `red-barn.jpg`, `barn-silo-sunset.jpg`, `field-tree-sunrise.jpg`, `eggs.jpg`: representative Unsplash stock, credited in the footer.
+- `img/farmhouse.jpg`, `img/farm-shop-barn.jpg`: the owner's own photos of the house and the shop barn (sent 2026-11-24, 640px wide, so shown framed rather than full-bleed).
+- `img/eggs.jpg`: representative Unsplash stock, credited in the footer.
 
 ## Sections
 
@@ -25,3 +26,7 @@ Hero (logo seal, motto) · info strip · our farm (Facebook quote) · from the f
 - No hours are published, so the site says to call or text before visiting. The Yuletide Village venue address isn't on the flyer, so it isn't stated.
 
 Sendra tracking (tracker + section and tap names) is applied with `sendra-track.py`.
+
+## Owner feedback (2026-11-24)
+
+"We are always selling eggs, tallow and bread. I also see hand crafted things such as jewelry and crocheted items. I would also use pictures of our house and barn, and let people know the shop is always open, just drive on past the house and it's the first barn." All applied.
